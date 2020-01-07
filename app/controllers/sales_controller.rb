@@ -95,8 +95,11 @@ class SalesController < ApplicationController
 		@sale = Sale.find(params[:id])
 		description = params[:description]
 		status = params[:status]
+		imei = params[:imei]
 		if @sale.category == 'service'
 			@sale.update(description: description, status: status)
+		else
+			@sale.update(imei: imei)
 		end
 
 		redirect_to print_sale_path(@sale), notice: 'Venda Salva com Sucesso!'
