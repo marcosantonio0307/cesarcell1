@@ -44,6 +44,10 @@
 					<%= f.label :IMEI %>
 					<%= f.text_field_tag :imei, @sale.imei, class: 'form-control' %>
 				</div><br>
+				<div>
+					<%= f.label :garantia %>
+					<%= f.text_field_tag :warrenty, @sale.warrenty, class: 'form-control' %>
+				</div><br>
 			<% end %>
 			
 			<%= f.submit :salvar, class: 'btn btn-success' %>
