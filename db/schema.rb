@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_01_02_142350) do
+ActiveRecord::Schema.define(version: 2020_01_11_014747) do
 
   create_table "cashes", force: :cascade do |t|
     t.decimal "total"
@@ -73,6 +73,7 @@ ActiveRecord::Schema.define(version: 2020_01_02_142350) do
     t.string "description"
     t.string "status"
     t.string "imei"
+    t.string "warrenty"
     t.index ["client_id"], name: "index_sales_on_client_id"
     t.index ["user_id"], name: "index_sales_on_user_id"
   end

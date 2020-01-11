@@ -31,6 +31,9 @@
 		<% if @sale.imei != nil %>
 			<p>IMEI: <%= @sale.imei %></p>
 		<% end %>
+		<% if @sale.warrenty != nil %>
+			<p>Garantia: <%= @sale.warrenty %></p>
+		<% end %>
 		<br>
 		<p>Total: <%= number_to_currency(@sale.total) %></p>
 		<p>================================</p>
